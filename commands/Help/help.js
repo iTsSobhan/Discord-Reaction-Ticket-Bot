@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 const color = JSON.parse(fs.readFileSync(`Storage/color.json`, `utf8`));
-const prefix = 'BOT-PREFIX';
+const prefix = ';';
 
 exports.run = async (bot, message, args, functions) => {
 
-    if (message.content === ';help', ';h',';help me' , ';help') {
+    if (message.content === `${prefix}komak`, `${prefix}h`,`${prefix}help me` , `${prefix}help`) {
         message.react('🙏🏻')
     } 
 
@@ -23,6 +23,8 @@ let embed = new Discord.MessageEmbed()
    > ${prefix}close`, false)
    .addField("Gereftan Linke Invite", `Ba In Command Mitavand Link Invite Bot Ro Begirid
    > ${prefix}invite`, false)
+   .addField("Gereftan List Server Hayi Ke Bot Adde", `Ba In Command Mitavand Liste TaMamie Server Hayi Ke Bot Adde Ro Begirid
+   > ${prefix}serverlist`, false)
       
 .setFooter(`Requested by ${message.author.username} | Created By Sobhan.SRZA#2153 :)`, `${message.author.displayAvatarURL()}`)
    return message.channel.send(embed);
