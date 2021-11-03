@@ -35,7 +35,7 @@ const client = new Discord.Client();
 Discord.Constants.DefaultOptions.ws.properties.$browser = "Discord Android"
 client.on("ready", () => {
   function YousamPower() {
-    let hungry = [`${prefix}play` , `${prefix}help` ]
+    let hungry = [`${prefix}ticket` , `${prefix}help` ]
     let Power = Math.floor(Math.random() * hungry.length);
     client.user.setActivity(hungry[Power], {type: "LISTENING"});//can be LISTENING, WATCHING, PLAYING, STREAMING
   }; setInterval(YousamPower, 5000)
