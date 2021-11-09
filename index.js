@@ -42,9 +42,8 @@ client.on("ready", () => {
 });
 client.login(config.token);
 
-//invite command
 const clinet = new Discord.Client();
-const prefix = 'BOT-PREFIX';
+const prefix = ';';
 bot.on('message', message => {
     let args = message.content.substring(prefix.length).split("invite")
 
@@ -53,10 +52,11 @@ bot.on('message', message => {
       inviteEmbed.setAuthor(`Requested by ${message.author.username}`, `${message.author.displayAvatarURL()}`)
       inviteEmbed.setThumbnail(message.client.user.displayAvatarURL({ format: "png" }))
       inviteEmbed.setTitle(`Ba Invite Bot Be Servert Azash Hemaiat Kon☺ ${client.user.username}`)
-      inviteEmbed.setDescription(`Montazer chi hasti🤨? Bodo mano be servert add kon🙂😘 \n\n [Invite Link](https://discord.com/api/oauth2/authorize?client_id=${message.client.user.id}&permissions=137775017040&scope=bot)`)
+      inviteEmbed.setDescription(`**Montazer chi hasti🤨? Bodo mano be servert add kon🙂😘 \n\n [Invite Link](https://discord.com/api/oauth2/authorize?client_id=${message.client.user.id}&permissions=137775017040&scope=bot)**`)
       inviteEmbed.setURL(`https://discord.gg/4pUbjscCmA`)
       inviteEmbed.setFooter("Created By Sobhan.SRZA#2153 :)", `https://cdn.discordapp.com/attachments/902034619791196221/905054458793312327/2GU.gif`)
       inviteEmbed.setColor("RANDOM")
+
             message.channel.send(inviteEmbed)
     }
 })
@@ -64,11 +64,11 @@ bot.on('message', message => {
 load();
 bot.login(config.token);
 
-//serverlist command
+
+//serverlist
 client.on('message', message => {
   if (message.content === `${prefix}serverlist`) { 
     const Guilds = client.guilds.cache.array().map((G, I) => `${I + 1}. **${G.name}** - **${G.id}**`).join("\n");
     if (!Guilds) return message.channel.send("No Guild");
     return message.channel.send(Guilds, { split: { char: "\n" } }); }
 });
-
