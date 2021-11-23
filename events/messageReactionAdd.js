@@ -18,13 +18,13 @@ module.exports = async (bot, reaction, user) => {
   let already = new Discord.MessageEmbed()
   .setColor(color.red)
   .setAuthor(`⛔ | Error`)
-        .setFooter("Created By Sobhan.SRZA#2153 :)", `https://cdn.discordapp.com/attachments/902034619791196221/905054458793312327/2GU.gif`)
+        .setFooter("Created By Mr.SIN RE#1528 :)", `https://cdn.discordapp.com/attachments/902034619791196221/905054458793312327/2GU.gif`)
   .setDescription(`Shoma Faghat Mitavanid Yek Ticket Baz Konid`);
 
   let success = new Discord.MessageEmbed()
   .setColor("RANDOM")
   .setTitle(`🎟️ | Ticket Sakhte Shod`)
-        .setFooter("Created By Sobhan.SRZA#2153 :)", `https://cdn.discordapp.com/attachments/902034619791196221/905054458793312327/2GU.gif`)
+        .setFooter("Created By Mr.SIN RE#1528 :)", `https://cdn.discordapp.com/attachments/902034619791196221/905054458793312327/2GU.gif`)
   .setDescription(`Ticket Shoma Sakhte Shod . Lotfan Motazere Staff Bashid Ta Be Ticket Shoma Pasokh Bedahand`);
 
   let split = '';
@@ -67,7 +67,7 @@ module.exports = async (bot, reaction, user) => {
         .setAuthor(`📝 | Yek Ticket Sakhte Shod`)
         .setTimestamp()
         .setColor(color.none)
-        .setFooter("Created By Sobhan.SRZA#2153 :)", `https://cdn.discordapp.com/attachments/902034619791196221/905054458793312327/2GU.gif`)
+        .setFooter("Created By Mr.SIN RE#1528 :)", `https://cdn.discordapp.com/attachments/902034619791196221/905054458793312327/2GU.gif`)
         .setDescription(`Yek Fard Ticket Baz Kard Va Motazere Pasokhgoii Staff Hast`)
         .addField(`Etelat`, `**Tavasote :** \`${user.tag}\`\n**ID :** \`${user.id}\`\n**Ticket :** ${channel}\n**Dar Tarikhe :** \`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\``);
 
@@ -88,20 +88,19 @@ module.exports = async (bot, reaction, user) => {
 
   // ========================= //
 
-  if(message.embeds.length === 1 && message.embeds[0].title === '🎟️ | Ticket Kamel Shod' && message.embeds[0].description === `baraye Bastane Ticket Az \\🗑️ Estefade Konid Va Dar Gheyre In Sorat Hich Vakoneshi Anjam Nadid.` ){
-    if(reaction.emoji.name === "🗑️"){
+  if(message.embeds.length === 1 && message.embeds[0].title === '🗑️ | Ticket Darckaste Pack Shodan AnjamShod' && message.embeds[0].description === `baraye Bastane Ticket Az 🗑️ Estefade Konid Va Dar Gheyre In Sorat Hich Vakoneshi Anjam Nadid.` ){
+    if(reaction.user.id === "🗑️"){
       if(user.id === db.get(`ticket.${message.channel.name}.user`)){
-
         let deletedEmbed = new Discord.MessageEmbed()
-        .setAuthor(`🗑️ | Ticket Kamel Shod`)
+        .setAuthor(`🗑️| Dar Khast Delete Shodan Ticket`)
         .setColor(color.none)
         .setDescription(`User Ticket Khod Ra Baraye Delete Shodan Taiid Kard Va Delete Shod`)
         .setTimestamp()
-        .setFooter("Created By Sobhan.SRZA#2153 :)", `https://cdn.discordapp.com/attachments/902034619791196221/905054458793312327/2GU.gif`)
+        .setFooter("Created By Mr.SIN RE#1528 :)", `https://cdn.discordapp.com/attachments/902034619791196221/905054458793312327/2GU.gif`)
         .addField(`Etelat`, `**Tavasote :** \`${user.tag}\`\n**ID :** \`${user.id}\`\n**Ticket :** \`${message.channel.name}\`\n**Dar Tarikhe :** \`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\``);
 
         if(logsChannel) logsChannel.send(deletedEmbed);
-
+      reaction.users.remove(user.id);
         message.channel.delete();
 
       }
