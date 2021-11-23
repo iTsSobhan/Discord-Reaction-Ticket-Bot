@@ -20,8 +20,8 @@ let embed = new Discord.MessageEmbed()
    .addField(`**> ${prefix}close**`, '`Az In Command Baraye Delete Kardan Ya Bastane Har Ticket Anjam Bedid`', false)
    .addField(`**> ${prefix}invite**`, '`Ba In Command Mitavand Link Invite Bot Ro Begirid`', false)
    .addField(`**> ${prefix}serverlist**`, '`Ba In Command Mitavand Liste TaMamie Server Hayi Ke Bot Adde Ro Begirid`', false)
-.setFooter(`Requested by ${message.author.username} | Created By Sobhan.SRZA#2153 :)`, `${message.author.displayAvatarURL()}`)
-  embed.addField(`**Links**`, `**[Support Server](${"https://discord.gg/4pUbjscCmA"}) • [Invite](https://discord.com/oauth2/authorize?client_id=${message.client.user.id}&permissions=137775017040&scope=bot)**`)
+.setFooter(`Requested by ${message.author.username} | Created By Mr.SIN RE#1528 :)`, `${message.author.displayAvatarURL()}`)
+  embed.addField(`**Links**`, `**[Support Server](${"https://discord.gg/5GYNec4urW"}) • [Invite](https://discord.com/oauth2/authorize?client_id=${message.client.user.id}&permissions=137775017040&scope=bot)**`)
 
    return message.channel.send(embed);
 
