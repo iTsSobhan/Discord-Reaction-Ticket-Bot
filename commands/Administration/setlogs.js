@@ -16,7 +16,7 @@ let embed = new Discord.MessageEmbed()
 .setAuthor(`✅ | Log Set Shod`)
 .setColor(color.none)
 .setTimestamp()
-.setFooter("Created By Sobhan.SRZA#2153 :)", `https://cdn.discordapp.com/attachments/902034619791196221/905054458793312327/2GU.gif`)
+.setFooter("Created By Mr.SIN RE#1528 :)", `https://cdn.discordapp.com/attachments/902034619791196221/905054458793312327/2GU.gif`)
 .addField(`Channel Set Shode : `, channelFetched, true)
 .addField(`Tavasote : `, message.author, true)
 .addField(`Dar Tarikhe : `, `\`${dateFormat(new Date(), "dd/mm/yyyy - HH:MM:ss")}\``, true);
