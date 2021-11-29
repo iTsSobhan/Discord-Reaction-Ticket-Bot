@@ -35,10 +35,11 @@ const client = new Discord.Client();
 Discord.Constants.DefaultOptions.ws.properties.$browser = "Discord Android"
 client.on("ready", () => {
   function YousamPower() {
-    let hungry = [`${prefix}ticket` , `${prefix}help` ]
-    let Power = Math.floor(Math.random() * hungry.length);
-    client.user.setActivity(hungry[Power], {type: "LISTENING"});//can be LISTENING, WATCHING, PLAYING, STREAMING
+    let sezar = [`${PREFIX}play` , `${PREFIX}help` ]
+    let Power = Math.floor(Math.random() * sezar.length);
+    client.user.setActivity(sezar[Power], {type: "PLAYING"});//can be LISTENING, WATCHING, PLAYING, STREAMING
   }; setInterval(YousamPower, 5000)
+    client.user.setStatus("dnd")//can be invesible, online, idle, dnd
 });
 client.login(config.token);
 
