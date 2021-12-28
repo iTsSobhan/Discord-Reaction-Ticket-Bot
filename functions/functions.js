@@ -32,11 +32,11 @@ module.exports = {
   // =================================== EMBED SUCCESS & ERROR =================================== //
 
   errorEmbed: function(message, channel, argument) {
-    channel.send(new Discord.MessageEmbed().setDescription(`\\📛 **Error:** ${argument} \\📛`).setColor(color.red))
+    channel.send(new Discord.MessageEmbed().setDescription(`📛 **Error:** ${argument} 📛`).setColor(color.red))
   },
 
   successEmbed: function(message, channel, argument) {
-    channel.send(new Discord.MessageEmbed().setDescription(`\\✅ **Movafaghiat Amiz Bood:** ${argument}`).setColor(color.green))
+    channel.send(new Discord.MessageEmbed().setDescription(`✅ **Movafaghiat Amiz Bood:** ${argument}`).setColor(color.green))
   },
 
 }
