@@ -18,6 +18,7 @@ const bot = new Discord.Client({
     partials: ['MESSAGE', 'CHANNEL', 'GUILD_MEMBER', 'REACTION']
   
 });
+require('discord-buttons')(bot);
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 bot.event = new Discord.Collection();
