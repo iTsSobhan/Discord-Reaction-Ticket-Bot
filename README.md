@@ -7,6 +7,10 @@ Nahve Faeall Kardane In Bot Ro Paean tozih Dadam👇🏻🙂
 
 
 ## Nahve Nasbe Bot
+[![Deploy on Herokucd](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Sobhan-SRZA/Discord-Reaction-Ticket-Bot/)
+
+[![Use on Replit](https://repl.it/badge/github/Sobhan-SRZA/Discord-Reaction-Ticket-Bot/)](https://repl.it/github/Sobhan-SRZA/Discord-Reaction-Ticket-Bot/)
+
 Shoma baraie Faeall Kardan Bot Baiad In Pish Niaz Haro Nasb Konid😉
 ```js
 - [discord.js] npm install discord.js
@@ -17,22 +21,10 @@ Shoma baraie Faeall Kardan Bot Baiad In Pish Niaz Haro Nasb Konid😉
 ```
 In Code Haie Nasb Ro Dar Terminal Bezanid Ta Bot Okshe
 
-- Token Bot Ro Dar Inja Vared Konid👉🏻 `config.json`                //Dar Folder *Storage* Mitonid Peydash Konid
+- Prefix Va Token Bot Ro Dar Inja Vared Konid👉🏻 `.env`
 ```js
-{
-    "token":"BOT-TOKEN"
-}
-```
-Va Baraie Tarif Prefixeton Dar Inja Varedesh Konid👉🏻`message.js`   //Dar Folder *events* Mitonid Peydash Konid
-```js
-module.exports = async (bot, message) => {
-    let prefix = "BOT-PREFIX"
-    const args = message.content.split(/ +/g);
-    const command = args.shift().slice(prefix.length).toLowerCase();
-    const cmd = bot.commands.get(command) || bot.aliases.get(command);
-    if(!message.content.toLowerCase().startsWith(prefix) || !message.guild || message.author.bot || !cmd) return;
-    cmd.run(bot, message, args, functions).catch(e => {return console.log(e)});
-} 
+TOKEN="BOT-TOKEN"
+PREFIX="BOT_PREFIX"
 ```
 
 - Ino Baz Konid👉🏻 `start.bat`
