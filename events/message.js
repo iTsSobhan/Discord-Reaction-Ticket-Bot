@@ -1,8 +1,8 @@
-const Discord = require("discord.js");
-const functions = require("../functions/functions.js");
-
+ const functions = require("../functions/functions.js");
 module.exports = async (bot, message) => {
-const prefix = 'BOT-PREFIX';
+  const db = require("quick.db");
+    var prefix = await db.fetch(`prefix_${message.guild.id}`);
+    if (prefix == null) prefix = process.env.PREFIX;
     const args = message.content.split(/ +/g);
     const command = args.shift().slice(prefix.length).toLowerCase();
     const cmd = bot.commands.get(command) || bot.aliases.get(command);

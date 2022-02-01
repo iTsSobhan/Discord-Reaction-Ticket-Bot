@@ -65,7 +65,7 @@ exports.run = async (bot, message, args, functions) => {
         let embed2 = new Discord.MessageEmbed()
         .setColor(color.green)
         .setTitle(`🎟️ | Ticket Kamel Shod`)
-        .setDescription(`baraye Bastane Ticket Az \\🗑️ Estefade Konid Va Dar Gheyre In Sorat Hich Vakoneshi Anjam Nadid.`);
+        .setDescription(`baraye Bastane Ticket Az 🗑️ Estefade Konid Va Dar Gheyre In Sorat Hich Vakoneshi Anjam Nadid.`);
         if(logsChannel) await logsChannel.send(staffEmbed);
         message.channel.send(embed2).then(m => m.react(`🗑️`));
       }

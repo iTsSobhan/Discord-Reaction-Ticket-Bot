@@ -1,18 +1,21 @@
 {
   "name": "Sobhan-ticket-bot",
-  "version": "1.0.0",
-  "description": "Here is the code for the [Supporter](https://discord.gg/xgcZNSjanP) ",
+  "version": "2.1.0",
+  "description": "Boti Ke ba Reaction Ticket Misazad",
   "main": "index.js",
-  "author": "",
+  "author": "Mr.SIN RE#1528 (SIZAR Team)",
   "license": "ISC",
   "engines": {
     "node": ">=12.0.0"
   },
   "dependencies": {
+    "ci": "^2.1.1",
     "dateformat": "^4.6.3",
+    "discord-buttons": "^4.0.0",
     "discord.js": "^12.5.3",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
+    "moment": "^2.29.1",
     "path": "^0.12.7",
     "quick.db": "^7.1.3"
   },

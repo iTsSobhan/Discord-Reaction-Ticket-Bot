@@ -8,7 +8,7 @@ if(message && message.deletable) message.delete().catch(e => {});
 
 let embed = new Discord.MessageEmbed()
 .setTitle(`Ticket System`)
-.setColor('RANDOME')
+.setColor(color.none)
 .setDescription('**Lotfan Dar Sorat Zarorat Ticket Besazid😀**')
       .setThumbnail('https://cdn.discordapp.com/attachments/902034619791196221/905040476355330068/8b7193b2110a034a2fe037437afc80b3.gif')
 .addField('Baraye Sakhte Ticket Roye 🎟️ Bezanid','Ba Sakhte Shodane Channele Gadid Bama Mitavanid Sohbat Konid📩')

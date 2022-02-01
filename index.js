@@ -10,14 +10,13 @@ console.log(`Your app is listening a http://localhost/${port}`)
 
 //require
 const Discord = require("discord.js");
-const config = require("./Storage/config.json");
-const bot = new Discord.Client({
+const bot  = new Discord.Client({
     disableEveryone: true,
     autoReconnect: true,
     disabledEvents: ["TYPING_START"],
     partials: ['MESSAGE', 'CHANNEL', 'GUILD_MEMBER', 'REACTION']
-  
 });
+const prefix = process.env.PREFIX;
 require('discord-buttons')(bot);
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
@@ -30,47 +29,46 @@ const load = async () => {
 }
 
 
-//bot status
-const discord = require('discord.js');
-const client = new Discord.Client();
-Discord.Constants.DefaultOptions.ws.properties.$browser = "Discord Android"
+//status
+const srza = require('discord.js');
+srza.Constants.DefaultOptions.ws.properties.$browser = "Discord Android";
 client.on("ready", () => {
-  function YousamPower() {
-    let sezar = [`${PREFIX}play` , `${PREFIX}help` ]
+   function YousamPower() {
+    let vazyiat = ["dnd","idle","online"] // online | dnd | idle | offline
+    let godrat = Math.floor(Math.random() * vazyiat.length)
+   client.user.setPresence({
+     status: vazyiat[godrat] })
+}; setInterval(YousamPower, 3000)
+   function srza() {
+    let sezar = [`${prefix}help`, `${prefix}play`,"Mr.SIN RE" , `🔰Sizar Team🔰`,`${client.guilds.cache.size} Servers` ]
     let Power = Math.floor(Math.random() * sezar.length);
-    client.user.setActivity(sezar[Power], {type: "PLAYING"});//can be LISTENING, WATCHING, PLAYING, STREAMING
-  }; setInterval(YousamPower, 5000)
-    client.user.setStatus("dnd")//can be invesible, online, idle, dnd
+    let statusPlay = ["LISTENING","WATCHING","PLAYING"] //can be LISTENING, WATCHING, PLAYING, STREAMING  
+    let godratPlay = Math.floor(Math.random() * statusPlay.length);     
+   client.user.setActivity(sezar[Power], {type: statusPlay[godratPlay]});
+        }; setInterval(srza, 3000)
+  console.log(`${client.user.tag} IS ONLINE`)
 });
-client.login(config.token);
 
-const clinet = new Discord.Client();
-const prefix = ';';
-bot.on('message', message => {
-    let args = message.content.substring(prefix.length).split("invite")
 
-    if (message.content.startsWith(`${prefix}invite`)) {
-        let inviteEmbed = new discord.MessageEmbed()
-      inviteEmbed.setAuthor(`Requested by ${message.author.username}`, `${message.author.displayAvatarURL()}`)
-      inviteEmbed.setThumbnail(message.client.user.displayAvatarURL({ format: "png" }))
-      inviteEmbed.setTitle(`Ba Invite Bot Be Servert Azash Hemaiat Kon☺ ${client.user.username}`)
-      inviteEmbed.setDescription(`**Montazer chi hasti🤨? Bodo mano be servert add kon🙂😘 \n\n [Invite Link](https://discord.com/api/oauth2/authorize?client_id=${message.client.user.id}&permissions=137775017040&scope=bot)**`)
-      inviteEmbed.setURL(`https://discord.gg/5GYNec4urW`)
-      inviteEmbed.setFooter("Created By Mr.SIN RE#1528 :)", `https://cdn.discordapp.com/attachments/902034619791196221/905054458793312327/2GU.gif`)
-      inviteEmbed.setColor("RANDOM")
 
-            message.channel.send(inviteEmbed)
+//prefix of bot
+bot.on('message', async message => {
+if(!message.guild || message.author.bot) return;
+if (message.content === `${prefix}prefix`) {
+              var prf = await require('quick.db').fetch(`prefix_${message.guild.id}`)||process.env.PREFIX;
+                   let errorprefixEmbed = new Discord.MessageEmbed()
+                              .setColor("RANDOM")
+                               .setThumbnail(bot.user.displayAvatarURL())
+                               .setTimestamp(Date.now())
+                               .setAuthor(`prefix of ${bot.user.tag} shows👌🏻`,bot.user.displayAvatarURL())
+                               .setFooter(`prefix shows to ${message.author.tag} |`,message.author.displayAvatarURL())
+                               .setDescription(`Prefix Dar In Server **${prf}** ASt`)
+                message.channel.send(errorprefixEmbed)
+
     }
 })
 
-load();
-bot.login(config.token);
+load()
+bot.login(process.env.TOKEN);
 
 
-//serverlist
-client.on('message', message => {
-  if (message.content === `${prefix}serverlist`) { 
-    const Guilds = client.guilds.cache.array().map((G, I) => `${I + 1}. **${G.name}** - **${G.id}**`).join("\n");
-    if (!Guilds) return message.channel.send("No Guild");
-    return message.channel.send(Guilds, { split: { char: "\n" } }); }
-});
