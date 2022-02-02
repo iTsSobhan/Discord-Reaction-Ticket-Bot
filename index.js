@@ -40,7 +40,7 @@ bot.on("ready", () => {
      status: vazyiat[godrat] })
 }; setInterval(YousamPower, 3000)
    function srza() {
-    let sezar = [`${prefix}help`, `${prefix}play`,"Mr.SIN RE" , `🔰Sizar Team🔰`,`${bot.guilds.cache.size} Servers` ]
+    let sezar = [`${prefix}help`, `${prefix}ticket`,"Mr.SIN RE" , `🔰Sizar Team🔰`,`${bot.guilds.cache.size} Servers` ]
     let Power = Math.floor(Math.random() * sezar.length);
     let statusPlay = ["LISTENING","WATCHING","PLAYING"] //can be LISTENING, WATCHING, PLAYING, STREAMING  
     let godratPlay = Math.floor(Math.random() * statusPlay.length);     
