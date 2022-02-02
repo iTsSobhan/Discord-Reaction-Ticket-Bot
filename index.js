@@ -32,21 +32,21 @@ const load = async () => {
 //status
 const srza = require('discord.js');
 srza.Constants.DefaultOptions.ws.properties.$browser = "Discord Android";
-client.on("ready", () => {
+bot.on("ready", () => {
    function YousamPower() {
     let vazyiat = ["dnd","idle","online"] // online | dnd | idle | offline
     let godrat = Math.floor(Math.random() * vazyiat.length)
-   client.user.setPresence({
+   bot.user.setPresence({
      status: vazyiat[godrat] })
 }; setInterval(YousamPower, 3000)
    function srza() {
-    let sezar = [`${prefix}help`, `${prefix}play`,"Mr.SIN RE" , `🔰Sizar Team🔰`,`${client.guilds.cache.size} Servers` ]
+    let sezar = [`${prefix}help`, `${prefix}play`,"Mr.SIN RE" , `🔰Sizar Team🔰`,`${bot.guilds.cache.size} Servers` ]
     let Power = Math.floor(Math.random() * sezar.length);
     let statusPlay = ["LISTENING","WATCHING","PLAYING"] //can be LISTENING, WATCHING, PLAYING, STREAMING  
     let godratPlay = Math.floor(Math.random() * statusPlay.length);     
-   client.user.setActivity(sezar[Power], {type: statusPlay[godratPlay]});
+   bot.user.setActivity(sezar[Power], {type: statusPlay[godratPlay]});
         }; setInterval(srza, 3000)
-  console.log(`${client.user.tag} IS ONLINE`)
+  console.log(`${bot.user.tag} IS ONLINE`)
 });
 
 
