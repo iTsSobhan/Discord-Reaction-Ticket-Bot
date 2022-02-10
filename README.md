@@ -32,6 +32,6 @@ PREFIX="BOT_PREFIX"
 - Easy Bot Shoma Dorost Shod 🕺
 
  ## Rah Haie Ertebat Ba Ma
-- Contact [Sobhan.SRZA#2153](https://discord.gg/xgcZNSjanP) For Any issues or Question
+- Contact [Mr.SIN RE#1528](https://discord.gg/xgcZNSjanP) For Any issues or Question
 
 - And Also Dont Forget To join My [Discord!](https://discord.gg/xgcZNSjanP)
