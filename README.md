@@ -1,3 +1,23 @@
+## My addresses in cyberspace 👇🏼🙃📡
+
+
+[Twich](https://www.twitch.tv/sobhan_srza) address
+ 
+My [Telegram](https://t.me/SobhanSRZA) Channel Address
+
+[Instegram](https://www.instagram.com/srza._.gamer) address
+ 
+Address of the [Aparat](https://www.aparat.com/Sobhan.SRZA)
+
+[YouTube](https://b2n.ir/srza.-.gamer) address
+
+[Discord](https://discord.gg/bNpqrdXNNn)address
+
+[YouTube](https://b2n.ir/srza._.action) address
+
+
+
+
 # Bot Ticket Kar Ba Reaction 😁
 Salam Guys 🖐
 
