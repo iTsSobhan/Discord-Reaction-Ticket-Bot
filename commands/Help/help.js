@@ -23,7 +23,16 @@ let embed = new Discord.MessageEmbed()
 .setFooter(`Requested by ${message.author.username} | Created By Mr.SIN RE#1528 :)`, `${message.author.displayAvatarURL()}`)
   embed.addField(`**Links**`, `**[Support Server](${"https://discord.gg/5GYNec4urW"}) • [Invite](https://discord.com/oauth2/authorize?client_id=${bot.user.id}&permissions=137775017040&scope=bot)**`)
 
-   return message.channel.send(embed).then(message.react('🙏🏻'));
+      const { MessageButton } = require('discord-buttons');
+ let btn2 = new MessageButton()
+    .setStyle('url') 
+    .setLabel('🤖Invite Bot') 
+    .setURL(`https://discord.com/api/oauth2/authorize?client_id=${message.client.user.id}&permissions=412353895745&scope=bot`)
+     let btn = new MessageButton()
+    .setStyle('url') 
+    .setLabel('🦾Server Support') 
+    .setURL(`https://discord.gg/5GYNec4urW`)
+   return message.channel.send( { button: [btn,btn2],embed: embed }).then(message.react('🙏🏻'));
 }
 exports.help = {
     name: "help",
