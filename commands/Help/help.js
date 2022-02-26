@@ -21,7 +21,6 @@ let embed = new Discord.MessageEmbed()
      .addField(`**> ${prefix}report <Matn Gozaresh>**`, '`Baraie Gozaresh Bug Haie Mojod :)`', false)
       .addField(`**> ${prefix}setprefix <New-Prefix>**`, '`Prefix Delkhah Dar Server`', false)
 .setFooter(`Requested by ${message.author.username} | Created By Mr.SIN RE#1528 :)`, `${message.author.displayAvatarURL()}`)
-  embed.addField(`**Links**`, `**[Support Server](${"https://discord.gg/5GYNec4urW"}) • [Invite](https://discord.com/oauth2/authorize?client_id=${bot.user.id}&permissions=137775017040&scope=bot)**`)
 
       const { MessageButton } = require('discord-buttons');
  let btn2 = new MessageButton()
