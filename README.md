@@ -55,3 +55,6 @@ PREFIX="BOT_PREFIX"
 - Contact [Mr.SIN RE#1528](https://discord.gg/vgnhGXabNw) For Any issues or Question
 
 - And Also Dont Forget To join My [Discord!](https://discord.gg/DMvSQMMu)
+
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Sobhan-SRZA&repo=Discord-Reaction-Ticket-Bot&theme=dracula)](https://github.com/Sobhan-SRZA/Discord-Reaction-Ticket-Bot)
+
