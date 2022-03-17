@@ -18,7 +18,6 @@ const Discord = require('discord.js')
     .setStyle('url') 
     .setLabel('🦾Server Support') 
     .setURL(`https://discord.gg/5GYNec4urW`)
-//      message.channel.send(inviteEmbed);
    message.channel.send( { button: [btn,btn2],embed: inviteEmbed });
 }
 exports.help = {
